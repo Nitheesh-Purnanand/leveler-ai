@@ -1,0 +1,287 @@
+/* General Page Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+    text-align: center;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Layout */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styling */
+form {
+    margin-bottom: 30px;
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+form label {
+    font-size: 1.1em;
+    color: #34495e;
+}
+
+form input[type="text"],
+form input[type="number"] {
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+    font-size: 1.1em;
+    border: 2px solid #bdc3c7;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="number"]:focus {
+    border-color: #3498db;
+}
+
+form input[type="submit"] {
+    background-color: #2ecc71;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #27ae60;
+}
+/* Styling for the Back to Task List Button */
+button.back-task-btn {
+    padding: 10px 18px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: #27ae60;
+    color: white;
+}
+
+/* Hover effect */
+button.back-task-btn:hover {
+    background-color: #229954;
+    transform: translateY(-3px);
+}
+
+/* Button Styling */
+button {
+    padding: 10px 15px;
+    margin: 8px 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+}
+
+button.complete-btn {
+    background-color: #2ecc71;
+    color: white;
+}
+
+button.complete-btn:hover {
+    background-color: #27ae60;
+}
+
+button.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+button.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+button.reset-btn {
+    background-color: #e67e22;
+    color: white;
+}
+
+button.reset-btn:hover {
+    background-color: #d35400;
+}
+
+/* Task List Styling */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+ul li {
+    padding: 15px;
+    background-color: #ecf0f1;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+ul li span.task-name {
+    font-size: 1.1em;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    background-color: #bdc3c7;
+    border-radius: 8px;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+    height: 30px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.progress {
+    height: 100%;
+    background-color: #2ecc71;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: width 0.5s ease-in-out;
+}
+
+.progress-bar .progress::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.progress:hover .progress::after {
+    opacity: 1;
+}
+
+.progress-completed {
+    background-color: #9b59b6;
+}
+/* Styling for the View Progress and Refresh Tasks Buttons */
+button.view-progress-btn,
+button.refresh-tasks-btn {
+    padding: 12px 20px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+/* View Progress Button */
+button.view-progress-btn {
+    background-color: #2980b9;
+    color: white;
+}
+
+button.view-progress-btn:hover {
+    background-color: #2471a3;
+    transform: translateY(-3px);
+}
+
+/* Refresh Tasks Button */
+button.refresh-tasks-btn {
+    background-color: #f39c12;
+    color: white;
+}
+
+button.refresh-tasks-btn:hover {
+    background-color: #e67e22;
+    transform: translateY(-3px);
+}
+
+/* Mobile Responsive Styling */
+@media (max-width: 600px) {
+    body {
+        margin: 10px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    form input[type="text"],
+    form input[type="number"],
+    form input[type="submit"] {
+        font-size: 1em;
+    }
+
+    ul li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    ul li button {
+        margin-top: 5px;
+    }
+
+    button {
+        padding: 8px 12px;
+    }
+}
