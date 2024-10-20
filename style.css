@@ -87,6 +87,71 @@ form input[type="submit"] {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+/* General Styles for index.html */
+header {
+    text-align: center;
+    margin-top: 50px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #2c3e50;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #7f8c8d;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+section.intro {
+    margin-top: 50px;
+}
+
+.intro h2 {
+    font-size: 2em;
+    color: #2980b9;
+}
+
+.intro p {
+    font-size: 1.1em;
+    color: #34495e;
+}
+
+section.cta {
+    margin-top: 30px;
+}
+
+.cta p {
+    font-size: 1.2em;
+    color: #16a085;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.cta-btn:hover {
+    background-color: #2980b9;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #95a5a6;
+}
 
 form input[type="submit"]:hover {
     background-color: #27ae60;
